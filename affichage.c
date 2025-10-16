@@ -43,10 +43,9 @@ void afficherGrille(Case **tableau, int size)
 
         for (int j = 0; j < size; j++)
         {
-            char c = tableau[i][j];
-            int value = (c >= '0' && c <= '9') ? (c - '0') : 0; // convertir caractère → entier
-            const char* color = get_case_color(value);           // ✅ appel de la fonction du fichier color.c
-            printf("| %s %c \033[0m", color, c);                 // applique la couleur
+            int d = tableau[i][j].valeur;
+            const char* color = get_case_color(d);
+            printf("| %s %d \033[0m ", color, d);
         }
 
         printf("|     ");

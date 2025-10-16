@@ -15,28 +15,75 @@ void affiche(char **tab, int size)
         printf("\n");
     }  
 }
- 
-int main()
-{
-    int size = 5;
 
+Case **creer_grille(int size)
+{
     Case **tab = malloc(size * sizeof(Case *));
     for (int i = 0; i < size; i++)
     {
         tab[i] = malloc(size * sizeof(Case));
     }
- 
+
     for (int i = 0; i < size; i++)
     {
         for (int j = 0; j < size; j++)
         {
-            Case c1 = {16, i, j};
+            Case c1 = {0, i, j};
             tab[i][j] = c1;
         }
     }
- 
+
+    return tab;
+}
+
+Case **case_vide(Case **tab, int size) 
+{
+    Case **tab_vide = malloc(size * size * sizeof(Case *));
+    int compt = 0;
+
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            if (tab[i][j].valeur == 0)
+            {
+                tab_vide[compt] = &tab[i][j];
+                compt++;
+            }
+        }
+    }
+    
+    return tab_vide;
+}
+
+int count_case(Case **tab, int size) 
+{
+    int compt = 0;
+
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            if (tab[i][j].valeur == 0)
+            {
+                compt++;
+            }
+        }
+    }
+
+    return compt;
+}
+
+
+int main()
+{
+    int size = 4;
+
+    Case **tab = creer_grille(size);
+    generer_case(tab, case_vide(tab, size), count_case(tab, size));
     afficherGrille(tab, size);
- 
+    
+
     free(tab);
     return 0;
 }

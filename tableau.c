@@ -30,7 +30,8 @@ int main()
     {
         for (int j = 0; j < size; j++)
         {
-                tab[i][j] = '8';
+            Case c1 = {16, i, j};
+            tab[i][j] = c1;
         }
     }
  

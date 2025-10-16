@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "include/affichage.h"
 
 
 void afficher2048(int size)
@@ -24,7 +25,7 @@ void afficher2048(int size)
     printf("\n\n");
 }
 
-void afficherGrille(int size)
+void afficherGrille(char **tableau, int size)
 {
     afficher2048(size);
 
@@ -40,7 +41,7 @@ void afficherGrille(int size)
 
         for (int j = 0; j < size; j++)
         {
-            printf("|     ");
+            printf("|  %c  ", tableau[i][j]);
         }
 
         printf("|     ");

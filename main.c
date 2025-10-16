@@ -5,10 +5,9 @@ gcc -o output/main main.c
 */
 #include <stdio.h>
 #include <stdlib.h>
-#include "affichage.c"
+#include "include/affichage.h"
 
 int main()
 {
-    afficherGrille(5);
     return 0;
 }

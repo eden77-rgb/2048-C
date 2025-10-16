@@ -5,11 +5,24 @@
 
 void bougerHaut(Case **tab, int size)
 {
-    for(int i = 0; i < size; i++)
+    for(int i = 1; i < size; i++)
     {
-        for(int j = 1; j < size; j++)
+        for(int j = 0; j < size; j++)
         {
-            add_valeur(&tab[i][j], &tab[i][j-1]);
+            if(tab[i][j].valeur != 0)
+            {
+                int a = i;
+                while (a > 0 && tab[a - 1][j].valeur == 0)
+                {
+                    a--;
+                }
+
+                if(a != i)
+                {
+                    tab[a][j].valeur =tab[i][j].valeur;
+                    tab[i][j].valeur = 0;
+                }
+            }
         }
     }
 }

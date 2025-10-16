@@ -15,15 +15,15 @@ void Interaction(Case **tab, int size) {
         break;
 
         case 'q':
-        //standby
+        bougerGauche(tab, size);
         break;
 
         case 's':
-        //standby
+        bougerBas(tab, size);
         break;
 
         case 'd':
-        //standby
+        bougerDroite(tab, size);
         break;
         
     }

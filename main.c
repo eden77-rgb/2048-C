@@ -21,6 +21,7 @@ int main()
         afficherGrille(tab, size);
         Interaction(tab, size);
     }
+    
     free(tab);
     return 0;
 }

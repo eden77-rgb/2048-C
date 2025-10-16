@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "include/affichage.h"
+#include "include/color.h"
  
 void affiche(char **tab, int size)
 {
@@ -17,7 +18,7 @@ void affiche(char **tab, int size)
  
 int main()
 {
-    int size = 8;
+    int size = 5;
 
     char **tab = malloc(size * sizeof(char *));
     for (int i = 0; i < size; i++)
@@ -29,7 +30,7 @@ int main()
     {
         for (int j = 0; j < size; j++)
         {
-                tab[i][j] = '0';
+                tab[i][j] = '8';
         }
     }
  

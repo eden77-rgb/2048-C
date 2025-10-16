@@ -1,0 +1,1 @@
+const char* get_case_color(int value);

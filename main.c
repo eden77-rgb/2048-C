@@ -5,9 +5,10 @@ gcc -o output/main main.c
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include "affichage.c"
 
 int main()
 {
-    printf("Bonjour Nathan\n");
+    afficherGrille(5);
     return 0;
 }

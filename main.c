@@ -16,10 +16,11 @@ int main()
 
     Case **tab = creer_grille(size);
     generer_case(tab, case_vide(tab, size), count_case(tab, size));
-    afficherGrille(tab, size);
-    Interaction(tab, size);
     
-
+    while (case_vide(tab,size) != 0) {
+        afficherGrille(tab, size);
+        Interaction(tab, size);
+    }
     free(tab);
     return 0;
 }

@@ -9,7 +9,6 @@ void affiche(char **tab, int size)
         for (int j = 0; j < size; j++)
         {
             printf("%c ", tab[i][j]);
-        
         }
         printf("\n");
     }  

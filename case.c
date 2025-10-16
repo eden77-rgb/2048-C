@@ -8,8 +8,8 @@ typedef struct
     int y;
 } Case;
 
-
-bool check_case(Case *c1, Case *c2) {
+bool check_case(Case *c1, Case *c2)
+{
     if (c1->valeur == c2->valeur)
     {
         return true;
@@ -18,8 +18,7 @@ bool check_case(Case *c1, Case *c2) {
     return false;
 }
 
-
-void add_valeur(Case *c1, Case *c2) 
+void add_valeur(Case *c1, Case *c2)
 {
     if (check_case(c1, c2))
     {
@@ -27,7 +26,6 @@ void add_valeur(Case *c1, Case *c2)
         c2->valeur = 0;
     }
 }
-
 
 int main()
 {

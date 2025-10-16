@@ -6,6 +6,9 @@
 
 void Interaction(Case **tab, int size) {
     char input;
+    
+    while ((getchar()) != '\n');
+    
     scanf("%c", &input);
 
     switch (input) {

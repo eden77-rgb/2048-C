@@ -1,13 +1,17 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "include/user.h"
+#include "include/Case.h"
+#include "include/mouvements.h"
 
-
-void Interaction() {
+void Interaction(Case **tab, int size) {
     char input;
     scanf("%c", &input);
 
     switch (input) {
 
         case 'z':
-        //standby
+        bougerHaut(tab, size);
         break;
 
         case 'q':

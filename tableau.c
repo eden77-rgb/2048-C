@@ -20,10 +20,10 @@ int main()
 {
     int size = 5;
 
-    char **tab = malloc(size * sizeof(char *));
+    Case **tab = malloc(size * sizeof(Case *));
     for (int i = 0; i < size; i++)
     {
-        tab[i] = malloc(size * sizeof(char));
+        tab[i] = malloc(size * sizeof(Case));
     }
  
     for (int i = 0; i < size; i++)

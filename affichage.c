@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "include/affichage.h"
 #include "include/color.h"
+#include "include/case.h"
 
 
 void afficher2048(int size)
@@ -26,7 +27,7 @@ void afficher2048(int size)
     printf("\n\n");
 }
 
-void afficherGrille(char **tableau, int size)
+void afficherGrille(Case **tableau, int size)
 {
     afficher2048(size);
 

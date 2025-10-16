@@ -1,34 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "include/affichage.h"
- 
-void affiche(char **tab, int size)
-{
-    for (int i = 0; i < size; i++)
-    {
-        for (int j = 0; j < size; j++)
-        {
-            printf("%c ", tab[i][j]);
-        }
-        printf("\n");
-    }  
-}
+#include "include/case.h"
+
  
 int main()
 {
-    int size = 8;
+    int size = 4;
 
-    char **tab = malloc(size * sizeof(char *));
+    Case **tab = malloc(size * sizeof(Case *));
     for (int i = 0; i < size; i++)
     {
-        tab[i] = malloc(size * sizeof(char));
+        tab[i] = malloc(size * sizeof(Case));
     }
  
     for (int i = 0; i < size; i++)
     {
         for (int j = 0; j < size; j++)
         {
-                tab[i][j] = '0';
+            Case c1 = {0, i, j};
+            tab[i][j] = c1;
         }
     }
  

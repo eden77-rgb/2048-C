@@ -26,8 +26,3 @@ void add_valeur(Case *c1, Case *c2)
         c2->valeur = 0;
     }
 }
-
-int main()
-{
-    return 0;
-}

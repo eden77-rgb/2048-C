@@ -1,2 +1,4 @@
+#include "case.h"
+
 void afficher2048(int size);
-void afficherGrille(char **tableau, int size);
+void afficherGrille(Case **tableau, int size);

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "include/affichage.h"
 #include "include/color.h"
- 
+
 void affiche(char **tab, int size)
 {
     for (int i = 0; i < size; i++)
@@ -10,10 +10,9 @@ void affiche(char **tab, int size)
         for (int j = 0; j < size; j++)
         {
             printf("%c ", tab[i][j]);
-        
         }
         printf("\n");
-    }  
+    }
 }
 
 Case **creer_grille(int size)
@@ -36,7 +35,7 @@ Case **creer_grille(int size)
     return tab;
 }
 
-Case **case_vide(Case **tab, int size) 
+Case **case_vide(Case **tab, int size)
 {
     Case **tab_vide = malloc(size * size * sizeof(Case *));
     int compt = 0;
@@ -52,11 +51,11 @@ Case **case_vide(Case **tab, int size)
             }
         }
     }
-    
+
     return tab_vide;
 }
 
-int count_case(Case **tab, int size) 
+int count_case(Case **tab, int size)
 {
     int compt = 0;
 
@@ -73,4 +72,3 @@ int count_case(Case **tab, int size)
 
     return compt;
 }
-

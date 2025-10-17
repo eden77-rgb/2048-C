@@ -5,7 +5,6 @@
 #include "include/tableau.h"
 #include "include/case.h"
 
-
 bool check_case(Case *c1, Case *c2)
 {
     if (c1->valeur == c2->valeur)
@@ -25,7 +24,7 @@ void add_valeur(Case *c1, Case *c2)
     }
 }
 
-void generer_case(Case **tab, Case **case_vide, int case_vide_size) 
+void generer_case(Case **tab, Case **case_vide, int case_vide_size)
 {
     srand(time(NULL));
 

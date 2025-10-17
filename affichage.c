@@ -4,23 +4,22 @@
 #include "include/color.h"
 #include "include/case.h"
 
-
 void afficher2048(int size)
 {
-    for(int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
         printf("======");
     }
     printf("\n");
-    
-    for(int i = 0; i < size; i++)
+
+    for (int i = 0; i < size; i++)
     {
         printf("   ");
     }
 
     printf("2048\n");
 
-    for(int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
         printf("======");
     }
@@ -31,9 +30,9 @@ void afficherGrille(Case **tableau, int size)
 {
     afficher2048(size);
 
-    for(int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
-        for(int f = 0; f < size; f++)
+        for (int f = 0; f < size; f++)
         {
             printf("------");
         }
@@ -44,20 +43,18 @@ void afficherGrille(Case **tableau, int size)
         for (int j = 0; j < size; j++)
         {
             int d = tableau[i][j].valeur;
-            const char* color = get_case_color(d);
+            const char *color = get_case_color(d);
             printf("| %s %d \033[0m ", color, d);
         }
 
         printf("|     ");
         printf("\n");
     }
-    
-        for(int f = 0; f < size; f++)
-        {
-            printf("------");
-        }
-        
-        printf("\n");
+
+    for (int f = 0; f < size; f++)
+    {
+        printf("------");
+    }
+
+    printf("\n");
 }
-
-
